@@ -8,13 +8,13 @@ const Gallery = () => {
       <div className={styles.mainArea}>
         <div className={styles.optionGallery}>
           <div className={styles.leftSide}>
-            <h1>G R A F I K D E S I G N</h1>
+            <h1>GRAFIK DESIGN</h1>
             <p>
               Projekte mit Photoshop CS6 (Avatar,Banner, Ads,Präsentationen)
             </p>
           </div>
           <div className={styles.rightSide}>
-            <h1>M O T I O N D E S I G N</h1>
+            <h1>MOTION DESIGN</h1>
             <p>
               Übungen mit After Effects CC (amv,motion design, Schulprojekte)
             </p>
@@ -22,6 +22,7 @@ const Gallery = () => {
         </div>
       </div>
       <div className={styles.storeButton}>
+        <h1>S T O R E</h1>
         <Link to="/store">
           <button> Store </button>
         </Link>

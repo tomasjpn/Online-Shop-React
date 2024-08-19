@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(255, 255, 255);
 }
 
 .mainArea {
@@ -22,8 +23,6 @@
   background-size: 400% 400%;
   border-radius: 20px;
   margin-top: 30px;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.222);
-  border-color: #dedede;
 }
 
 @keyframes gradientAnimation {
@@ -50,6 +49,11 @@
   font-weight: lighter;
   text-align: center;
   margin-bottom: 0px;
+  letter-spacing: 15px;
+}
+
+.optionGallery p {
+  font-size: 10px;
 }
 
 .leftSide,
@@ -66,19 +70,39 @@
   border-radius: 20px;
   overflow: hidden;
   border-radius: 20px 0 0 20px;
+  animation: hoverColorOut 0.5s;
 }
 
 .rightSide {
   border-radius: 20px;
   overflow: hidden;
   border-radius: 0 20px 20px 0;
+  animation: hoverColorOut 0.5s;
 }
 
 .leftSide:hover {
-  background-color: rgba(255, 255, 255, 0.164);
+  animation: hoverColor 0.5s forwards;
 }
 .rightSide:hover {
-  background-color: rgba(255, 255, 255, 0.164);
+  animation: hoverColor 0.5s forwards;
+}
+
+@keyframes hoverColor {
+  from {
+    background-color: "";
+  }
+  to {
+    background-color: #5885ff43;
+  }
+}
+
+@keyframes hoverColorOut {
+  from {
+    background-color: #5885ff43;
+  }
+  to {
+    background-color: "";
+  }
 }
 
 /* Trennlinie in der Mitte */
@@ -92,6 +116,6 @@
   transform: translateX(-50%);
 }
 
-storeButton {
-  margin-top: 100px;
+.storeButton {
+  margin-top: 10px;
 }
