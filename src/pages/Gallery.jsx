@@ -1,5 +1,12 @@
+import Navbar from "../components/Navbar";
+
 const Gallery = () => {
-  return <div>Gallery</div>;
+  return (
+    <div>
+      <Navbar />
+      <h1> Gallery</h1>
+    </div>
+  );
 };
 
 export default Gallery;
