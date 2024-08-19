@@ -4,3 +4,27 @@
   gap: 40px;
   font-size: 18px;
 }
+
+.shopping-cart img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  background-color: rgb(174, 174, 174);
+  mask-image: url("../assets/cart.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+.navbar img:hover {
+  background-color: #535bf2;
+}
+
+.search-page img {
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+  background-color: rgb(174, 174, 174);
+  mask-image: url("../assets/loupe.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
