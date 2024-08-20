@@ -6,7 +6,7 @@ import styles from "./styles/Home.module.css";
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
       <div className={styles.mainArea}>
         <div className={styles.mainAreaTitle}>
@@ -24,7 +24,7 @@ function App() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

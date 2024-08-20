@@ -33,8 +33,8 @@ const Gallery = () => {
   };
 
   return (
-    <div>
-      <Navbar />
+    <div className={styles.galleryMainArea}>
+      <Navbar className={styles.Navbar} />
       <div className={styles.mainArea}>
         <div className={styles.optionGallery}>
           {/*Linkes Feld der Option Bar für GFX bzw. VFX*/}
@@ -43,28 +43,39 @@ const Gallery = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <h1>GRAFIK DESIGN</h1>
-            <p>
-              Projekte mit Photoshop CS6 (Avatar, Banner, Ads, Präsentationen)
-            </p>
+            <Link to="/gfx">
+              <h1>GRAFIK DESIGN</h1>
+              <p>
+                Projekte mit Photoshop CS6 (Avatar, Banner, Ads, Präsentationen)
+              </p>
+            </Link>
           </div>
           {/*Rectes Feld der Option Bar für GFX bzw. VFX*/}
-          <div
-            className={styles.rightSide}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <h1>MOTION DESIGN</h1>
-            <p>
-              Übungen mit After Effects CC (amv, motion design, Schulprojekte)
-            </p>
-          </div>
+          <Link to="/vfx">
+            <div
+              className={styles.rightSide}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <h1>MOTION DESIGN</h1>
+              <p>
+                Übungen mit After Effects CC (amv, motion design, Schulprojekte)
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
       <div className={styles.storeButton}>
         <h2>S T O R E</h2>
+        <p>Commission Work</p>
+        <p2>
+          Tauchen Sie ein in die Welt der visuellen Kreativität und lassen Sie
+          Ihre Marke durch beeindruckende Grafiken und dynamische Animationen
+          erstrahlen. Ich biete Ihnen maßgeschneiderte Designlösungen, die Ihre
+          Botschaft auf einzigartige Weise zum Leben erwecken.
+        </p2>
         <Link to="/store">
-          <button>Store</button>
+          <button>View</button>
         </Link>
       </div>
     </div>

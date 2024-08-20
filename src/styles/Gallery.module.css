@@ -1,9 +1,25 @@
+.Navbar {
+  margin-bottom: 0px;
+}
+
+.galleryMainArea {
+  margin-bottom: 100px;
+}
+
 .mainArea {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
+}
+
+.mainArea h1 {
+  color: #878dff;
+}
+
+.mainArea p {
+  color: aliceblue;
 }
 
 .mainArea {
@@ -22,7 +38,7 @@
   animation: gradientAnimation 15s ease infinite;
   background-size: 400% 400%;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 @keyframes gradientAnimation {
@@ -46,7 +62,7 @@
 
 .optionGallery h1 {
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 0px;
   letter-spacing: 15px;
@@ -54,6 +70,7 @@
 
 .optionGallery p {
   font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .leftSide,
@@ -78,6 +95,8 @@
   overflow: hidden;
   border-radius: 0 20px 20px 0;
   animation: hoverColorOut 0.5s;
+  width: 75vh;
+  height: 20vh;
 }
 
 .leftSide:hover {
@@ -118,4 +137,39 @@
 
 .storeButton {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 150vh;
+  background: rgba(174, 174, 174, 0.194);
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.storeButton h2 {
+  font-weight: 400;
+  color: rgb(174, 174, 174);
+  margin-bottom: 0px;
+}
+
+.storeButton p {
+  margin-top: 0px;
+  color: #646cff;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.storeButton p2 {
+  margin-top: 0px;
+  color: rgba(0, 0, 0, 0.409);
+  margin-bottom: 15px;
+  max-width: 100vh;
+}
+
+.storeButton button {
+  width: 40vh;
+  border-radius: 20px;
+  color: #ffffff;
 }
