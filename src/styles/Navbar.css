@@ -3,6 +3,7 @@
   justify-content: center;
   gap: 40px;
   font-size: 18px;
+  opacity: 1;
 }
 
 .shopping-cart img {
@@ -27,4 +28,49 @@
   mask-image: url("../assets/loupe.png");
   mask-size: cover;
   mask-repeat: no-repeat;
+}
+
+.navbar a {
+  opacity: 0;
+  animation: slideDown 1s ease-out forwards,
+    opacityTransition 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(30%);
+  }
+}
+
+@keyframes opacityTransition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar > a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navbar > a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.navbar > a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.navbar > a:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.navbar > a:nth-child(5) {
+  animation-delay: 0.5s;
 }
