@@ -6,6 +6,8 @@
   line-height: 1.5;
   font-weight: 400;
 
+  overflow: inherit;
+
   color-scheme: light dark;
   color: rgb(0, 0, 0);
   background-color: var(--background-color);
