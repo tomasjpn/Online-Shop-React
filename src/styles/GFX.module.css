@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 .item1,
@@ -33,5 +33,88 @@
   grid-row: 1 / 4;
   width: 90%;
   height: 100%;
+  object-fit: cover;
+}
+
+.mainPreview p {
+  font-size: 15px;
+  margin-top: 30px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.deutschGrid {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center; /* Horizontales Zentrieren des Grid-Inhalts */
+  align-items: center; /* Vertikales Zentrieren des Inhalts */
+  width: fit-content; /* Passt die Breite des Grids an den Inhalt an */
+  margin: 0px;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.item5,
+.item6 {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+
+.deutschGrid p {
+  color: #888;
+  max-width: 30vh;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 0px;
+}
+
+.politikDGrid {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.politikDGrid p {
+  color: #888;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 90px;
+}
+
+.politikDGrid p span {
+  font-size: 24px;
+}
+
+.item7 {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 70px;
+}
+
+.socialMedia p {
+  color: #888;
+  font-size: 12px;
+}
+
+.socialMedia p span {
+  font-size: 17px;
+  letter-spacing: 5px;
+}
+
+.item8,
+.item9 {
+  width: 80%;
+  height: auto;
   object-fit: cover;
 }
