@@ -15,11 +15,21 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/GFX.module.css";
 
 const GFX = () => {
-  // Animation Varianten für Container
+  // Animation Variante für Container
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
+    },
+  };
+
+  // Hintergrund Animation
+  const backgroundVariants = {
+    hidden: { opacity: 0, scaleX: 0 },
+    visible: {
+      opacity: 1,
+      scaleX: 1,
+      transition: { duration: 1, ease: "easeOut", delay: 0.2 },
     },
   };
 
@@ -123,12 +133,18 @@ const GFX = () => {
     <>
       <div className={styles.mainContainer}>
         <Navbar />
+
+        {/* Section für Politik Bundespräsident Präsentation*/}
         <motion.section
           className={`${styles.politikSection} ${styles.hidden}`}
           initial="hidden"
           animate={controlsPolitik}
           variants={containerVariants}
         >
+          <motion.div
+            className={styles.background}
+            variants={backgroundVariants}
+          />
           <motion.div className={styles.mainPreview} variants={childVariants1}>
             <motion.div className={styles.PolitikGrid}>
               <motion.img
@@ -162,6 +178,8 @@ const GFX = () => {
             </p>
           </motion.div>
         </motion.section>
+
+        {/* Section für Deutsch Flyer Auto Präsentation*/}
         <motion.section
           className={styles.deutschGrid}
           initial="hidden"
@@ -186,25 +204,35 @@ const GFX = () => {
             />
           </div>
         </motion.section>
+
+        {/* Section für Politik Flyer Drogen Aufklärung Präsentation*/}
         <motion.section
           className={styles.politikDGrid}
           initial="hidden"
           animate={controlsPolitikD}
           variants={containerVariants}
         >
-          <div className={styles.politikDGrid}>
-            <motion.img
-              src={image1PD}
-              className={styles.item7}
-              alt="Politik D Image 1"
-              variants={childVariants8}
-            />
-            <motion.p variants={childVariants9}>
-              <span> P O L I T I K 2 0 1 9</span> <br /> Flyer zum Thema Drogen
-              und Sucht - 8. Klasse
-            </motion.p>
-          </div>
+          <motion.div
+            className={styles.background2}
+            variants={backgroundVariants}
+          />
+          <motion.div className={styles.politikDMain}>
+            <motion.div className={styles.politikDGrid}>
+              <motion.img
+                src={image1PD}
+                className={styles.item7}
+                alt="Politik D Image 1"
+                variants={childVariants8}
+              />
+              <motion.p variants={childVariants9}>
+                <span> P O L I T I K 2 0 1 9</span> <br /> Flyer zum Thema
+                Drogen und Sucht - 8. Klasse
+              </motion.p>
+            </motion.div>
+          </motion.div>
         </motion.section>
+
+        {/* Section für Social Media Banner Präsentation*/}
         <motion.section
           className={styles.socialMedia}
           initial="hidden"
