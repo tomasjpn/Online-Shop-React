@@ -58,7 +58,7 @@ const Gallery = () => {
 
   return (
     <div className={`${styles.galleryMainArea} ${styles[animation]}`}>
-      <Navbar className={styles.Navbar} />
+      <Navbar className={styles.Navbar} fixed={false} />
       <div className={styles.mainArea}>
         <div className={styles.optionGallery}>
           {/*Linkes Feld der Option Bar für GFX bzw. VFX*/}

@@ -3,9 +3,6 @@
   flex-direction: column;
 }
 
-.mainContaier {
-}
-
 .mainPreview {
   display: flex;
   flex-direction: column;
@@ -51,9 +48,9 @@
 .deutschGrid {
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center; /* Horizontales Zentrieren des Grid-Inhalts */
-  align-items: center; /* Vertikales Zentrieren des Inhalts */
-  width: fit-content; /* Passt die Breite des Grids an den Inhalt an */
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
   margin: 0px;
   gap: 50px;
   margin-top: 90px;
@@ -89,6 +86,7 @@
   text-align: left;
   margin-left: 40px;
   margin-top: 150px;
+  max-width: 50vh;
 }
 
 .politikDGrid p span {

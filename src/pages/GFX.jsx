@@ -132,7 +132,7 @@ const GFX = () => {
   return (
     <>
       <div className={styles.mainContainer}>
-        <Navbar />
+        <Navbar fixed={true} />
 
         {/* Section für Politik Bundespräsident Präsentation*/}
         <motion.section
@@ -226,7 +226,11 @@ const GFX = () => {
               />
               <motion.p variants={childVariants9}>
                 <span> P O L I T I K 2 0 1 9</span> <br /> Flyer zum Thema
-                Drogen und Sucht - 8. Klasse
+                Drogen und Sucht - 8. Klasse <br></br>
+                <br></br> Dieser Flyer bietet eine ausführliche Aufklärung über
+                die Droge Crystal Meth sowie deren potenzielle Auswirkungen auf
+                die Gesundheit.Entsprechend wurde ein passendes Design für
+                dieses Thema entwickelt.
               </motion.p>
             </motion.div>
           </motion.div>
@@ -258,6 +262,8 @@ const GFX = () => {
             />
           </div>
         </motion.section>
+        <p></p>
+        <p style={{ color: "#999" }}>Tomas Pham 2024</p>
       </div>
     </>
   );

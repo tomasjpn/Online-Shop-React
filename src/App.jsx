@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className={isAnimating ? styles.slideUpEnd : ""}>
-      <Navbar />
+      <Navbar fixed={false} />
       <div className={styles.mainArea}>
         <div className={styles.mainAreaTitle}>
           <h1>Tomas Pham</h1>

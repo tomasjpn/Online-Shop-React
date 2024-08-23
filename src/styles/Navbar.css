@@ -6,6 +6,54 @@
   opacity: 1;
 }
 
+/* Stile für Navbar, wenn sie fixiert sein soll */
+.fixedNavbar {
+  position: fixed;
+  z-index: 1000;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding-top: 0px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  animation: backgroundAnim 0.7s ease-out forwards;
+  border-radius: 25px;
+  background-size: cover;
+  z-index: 0;
+}
+
+@keyframes backgroundAnim {
+  from {
+    background-color: transparent; /* Korrekt: Initialer Hintergrundfarbe */
+    transform: scaleX(0); /* Korrekt: Initialer Skalierungswert */
+  }
+  to {
+    background-color: #00000025; /* Ziel-Hintergrundfarbe */
+    transform: scaleX(1); /* Ziel-Skalierungswert */
+  }
+}
+
+.fixedNavbar a {
+  color: azure;
+  text-decoration: none;
+}
+
+.mainContainerNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .shopping-cart img {
   width: 25px;
   height: 25px;
@@ -14,6 +62,20 @@
   mask-image: url("../assets/cart.png");
   mask-size: cover;
   mask-repeat: no-repeat;
+}
+
+.fixedNavbar .shopping-cart img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  background-color: rgb(255, 255, 255);
+  mask-image: url("../assets/cart.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast; /* Für Webkit-basierte Browser */
+  image-rendering: optimize-contrast; /* Für andere Browser */
+  image-rendering: auto; /* Standard-Wert, kann aber auch verwendet werden */
+  filter: contrast(1.1) brightness(1.1); /* Beispielwerte, um die Bildqualität zu verbessern */
 }
 
 .navbar img:hover {
@@ -25,6 +87,20 @@
   height: 27px;
   object-fit: cover;
   background-color: rgb(174, 174, 174);
+  mask-image: url("../assets/loupe.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+.fixedNavbar .search-page img:hover {
+  background-color: #535bf2;
+}
+
+.fixedNavbar .search-page img {
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+  background-color: rgb(255, 255, 255);
   mask-image: url("../assets/loupe.png");
   mask-size: cover;
   mask-repeat: no-repeat;
