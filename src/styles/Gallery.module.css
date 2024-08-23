@@ -9,11 +9,11 @@
 
 @keyframes slide-from-left {
   from {
-    transform: translateX(-50vw);
+    transform: translateY(50vh);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }

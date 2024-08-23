@@ -14,19 +14,19 @@ const Gallery = () => {
   // Animation für die Option Grafik Design
   const handleOptionBarLeft = () => {
     setAnimation("slideLeft");
-    setTimeout(() => navigate("/gfx"), 1000);
+    setTimeout(() => navigate("/gfx"), 800);
   };
 
   // Animation für die Option Motion Design
   const handleOptionBarRight = () => {
     setAnimation("slideRight");
-    setTimeout(() => navigate("/vfx"), 1000);
+    setTimeout(() => navigate("/vfx"), 800);
   };
 
   // Animation für die Option Store
   const handleStoreOption = () => {
     setAnimation("slideStore");
-    setTimeout(() => navigate("/store"), 1000);
+    setTimeout(() => navigate("/store"), 800);
   };
 
   // Funktion um das Bild je nachdem, ob das like oder rechte Feld ausgewählt wird, wird der Hintergrund verändert
