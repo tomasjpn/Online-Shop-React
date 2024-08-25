@@ -90,13 +90,20 @@ const Gallery = () => {
       </div>
       <div className={styles.storeButton}>
         <h2>S T O R E</h2>
-        <p>Commission Work</p>
-        <p2>
-          Tauchen Sie ein in die Welt der visuellen Kreativität und lassen Sie
-          Ihre Marke durch beeindruckende Grafiken und dynamische Animationen
-          erstrahlen. Ich biete Ihnen maßgeschneiderte Designlösungen, die Ihre
-          Botschaft auf einzigartige Weise zum Leben erwecken.
-        </p2>
+        <div className={styles.p1}>
+          {" "}
+          <p>Commission Work</p>
+        </div>
+
+        <div className={styles.p2}>
+          {" "}
+          <p>
+            Tauchen Sie ein in die Welt der visuellen Kreativität und lassen Sie
+            Ihre Marke durch beeindruckende Grafiken und dynamische Animationen
+            erstrahlen. Ich biete Ihnen maßgeschneiderte Designlösungen, die
+            Ihre Botschaft auf einzigartige Weise zum Leben erwecken.
+          </p>
+        </div>
 
         <button onClick={handleStoreOption}>View</button>
       </div>

@@ -1,0 +1,72 @@
+.gifContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.gifGrid {
+  display: grid;
+  grid-template-columns: 1fr 1000px;
+  grid-template-rows: repeat(2, 1fr);
+  transform: scale(0.9);
+  margin: 0 auto;
+  width: 64%;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.textDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.textDiv p {
+  color: #a1a1a1;
+  max-width: 100vh;
+  text-align: center;
+  font-weight: 200;
+}
+
+.textDiv h1 {
+  font-weight: lighter;
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #888;
+  margin-bottom: 0px;
+}
+
+.item1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.item2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.item2,
+.item3 {
+  max-width: 48.85%;
+}
+
+.item1,
+.item2,
+.item3 {
+  margin: 15px;
+}
+
+.item1,
+.item2,
+.item3,
+.item4 {
+  border-radius: 15px;
+}
