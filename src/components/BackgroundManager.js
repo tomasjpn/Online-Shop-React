@@ -14,6 +14,10 @@ const BackgroundManager = () => {
     } else {
       document.body.classList.remove("background-black"); // Ansonsten wird die Klasse entfernt
     }
+
+    return () => {
+      document.body.classList.remove("background-black");
+    };
   }, [location.pathname]); // Wird nur ausgeführt, wenn sich der Pfad-Name ändert
 
   return null;

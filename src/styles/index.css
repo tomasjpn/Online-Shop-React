@@ -16,7 +16,16 @@
 }
 
 body.background-black {
-  background-color: black !important;
+  animation: backgroundFade 0.8s ease-out forwards !important;
+}
+
+@keyframes backgroundFade {
+  from {
+    background-color: "";
+  }
+  to {
+    background-color: rgb(20, 20, 20);
+  }
 }
 
 body.background-black::before {
