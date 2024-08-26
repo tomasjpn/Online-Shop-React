@@ -70,3 +70,98 @@
 .item4 {
   border-radius: 15px;
 }
+
+/* Englisch Projekt */
+.mainContainerEnglish {
+  display: flex;
+  margin-top: 400px;
+}
+
+.mainContainerEnglish iframe {
+  border-radius: 15px;
+}
+
+.mainContainerEnglish h1 {
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 7px;
+  color: #888;
+  margin-bottom: 0px;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 70px;
+}
+
+.mainContainerEnglish p {
+  color: #a1a1a1;
+  max-width: 100vh;
+  text-align: center;
+  font-weight: 200;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+/* Musik Projekt */
+.mainContainerMusik {
+  display: flex;
+  margin-top: 400px;
+}
+
+.musikVideo iframe {
+  border-radius: 15px;
+}
+
+.textContainerMusik h1 {
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 7px;
+  color: #888;
+  margin-bottom: 0px;
+  text-align: left;
+  margin-right: 30px;
+  margin-top: 70px;
+}
+
+.textContainerMusik p {
+  color: #a1a1a1;
+  max-width: 100vh;
+  text-align: center;
+  font-weight: 200;
+  text-align: left;
+  margin-right: 30px;
+  font-size: 15px;
+}
+
+/* Shapes Projekt */
+.mainContainerShapes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 400px;
+}
+.shapesVideo iframe {
+  border-radius: 15px;
+}
+
+.textContainerShapes h1 {
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 7px;
+  color: #888;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-right: 30px;
+  margin-top: 70px;
+}
+
+.textContainerShapes p {
+  color: #a1a1a1;
+  max-width: 100vh;
+  text-align: center;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 30px;
+  font-size: 15px;
+}
