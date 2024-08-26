@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import image from "./assets/25231.png";
+import BackgroundManager from "./components/BackgroundManager";
 import Navbar from "./components/Navbar";
 import "./styles/App.css";
 import styles from "./styles/Home.module.css";
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className={isAnimating ? styles.slideUpEnd : ""}>
+      <BackgroundManager />
       <Navbar fixed={false} />
       <div className={styles.mainArea}>
         <div className={styles.mainAreaTitle}>

@@ -10,9 +10,12 @@ const BackgroundManager = () => {
 
     if (path.startsWith("/vfx")) {
       // Wenn der Name = VFX
+
       document.body.classList.add("background-black"); // Wird dem body die Klasse Background-black hinzugefügt
+      document.body.classList.remove("background-white");
     } else {
-      document.body.classList.remove("background-black"); // Ansonsten wird die Klasse entfernt
+      document.body.classList.add("background-white"); // Ansonsten wird die Klasse entfernt
+      document.body.classList.remove("background-black");
     }
 
     return () => {

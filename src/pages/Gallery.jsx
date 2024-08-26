@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage1 from "../assets/GFX.png";
 import backgroundImage2 from "../assets/VFX.png";
+import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Gallery.module.css";
 
@@ -58,6 +59,7 @@ const Gallery = () => {
 
   return (
     <div className={`${styles.galleryMainArea} ${styles[animation]}`}>
+      <BackgroundManager />
       <Navbar className={styles.Navbar} fixed={false} />
       <div className={styles.mainArea}>
         <div className={styles.optionGallery}>

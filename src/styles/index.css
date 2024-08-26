@@ -16,16 +16,33 @@
 }
 
 body.background-black {
-  animation: backgroundFade 0.8s ease-out forwards !important;
+  animation: backgroundFadeBlack 0.8s ease-out forwards !important;
 }
 
-@keyframes backgroundFade {
+body.background-white {
+  animation: backgroundFadeWhite 0.8s ease-out forwards !important;
+}
+
+@keyframes backgroundFadeBlack {
   from {
-    background-color: "";
+    background-color: var(--background-color);
   }
   to {
     background-color: rgb(20, 20, 20);
   }
+}
+
+@keyframes backgroundFadeWhite {
+  from {
+    background-color: rgb(20, 20, 20);
+  }
+  to {
+    background-color: var(--background-color);
+  }
+}
+
+body.no-transition {
+  transition: none !important;
 }
 
 body.background-black::before {

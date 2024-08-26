@@ -11,6 +11,7 @@ import {
   image3P,
   image4P,
 } from "../assets/imageImports.js";
+import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar";
 import styles from "../styles/GFX.module.css";
 
@@ -131,6 +132,7 @@ const GFX = () => {
 
   return (
     <>
+      <BackgroundManager />
       <div className={styles.mainContainer}>
         <Navbar fixed={true} />
 
