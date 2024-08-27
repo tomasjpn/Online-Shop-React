@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Flyer Design",
+    "price": "~20-30€",
+    "description": "Lassen Sie sich einen individuellen Flyer erstellen, der Ihre Botschaft präzise und ästhetisch vermittelt. Ideal für Veranstaltungen, Werbeaktionen und Geschäftspräsentationen.",
+    "image_path": "/assets/productImg/Unbenannt-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Social Media Design",
+    "price": "~20-30€",
+    "description": "Stechen Sie in den sozialen Medien hervor mit maßgeschneiderten Designs, die Ihre Marke und Inhalte optimal in Szene setzen. Perfekt für Posts, Stories und Anzeigen.",
+    "image_path": "/assets/productImg/Unbenannt-2.png"
+  },
+  {
+    "id": 5,
+    "name": "Visual Effects Video",
+    "price": "~40-90€",
+    "description": "Erwecken Sie Ihre Videoprojekte mit atemberaubenden visuellen Effekten zum Leben. Ideal für Filme, Musikvideos oder Werbeclips, die beeindrucken sollen.",
+    "image_path": "/assets/productImg/Unbenannt-5.png"
+  },
+  {
+    "id": 3,
+    "name": "Motion Design",
+    "price": "~50-100€",
+    "description": "Bringen Sie Ihre Ideen zum Leben mit dynamischen Animationen und Motion Graphics. Ideal für Werbevideos, Erklärfilme und digitale Präsentationen.",
+    "image_path": "/assets/productImg/Unbenannt-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Logo Design",
+    "price": "~10-20€",
+    "description": "Einzigartige und professionelle Logos, die Ihre Markenidentität widerspiegeln und einen bleibenden Eindruck hinterlassen. Perfekt für neue Unternehmen oder Rebrandings.",
+    "image_path": "/assets/productImg/Unbenannt-4.png"
+  },
+  {
+    "id": 6,
+    "name": "Image Editing",
+    "price": "~10-30€",
+    "description": "Perfektionieren Sie Ihre Bilder mit professioneller Bildbearbeitung. Entfernen Sie unerwünschte Elemente, optimieren Sie Farben und verbessern Sie die Gesamtästhetik.",
+    "image_path": "/assets/productImg/Unbenannt-6.png"
+  }
+]

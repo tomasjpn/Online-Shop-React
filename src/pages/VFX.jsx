@@ -8,13 +8,6 @@ import styles from "../styles/VFX.module.css";
 
 const VFX = () => {
   // Animation Variante für Container
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-    },
-  };
-
   const horizontalAnim = (xvalue, duration, blur = "2px") => ({
     hidden: { opacity: 0, x: xvalue, filter: `blur(${blur})` },
     visible: {

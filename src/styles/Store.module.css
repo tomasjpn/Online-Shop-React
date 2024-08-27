@@ -1,0 +1,108 @@
+.body {
+  color: #888;
+}
+
+/* Produkte Container */
+
+.mainShop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.mainShop img {
+  width: 50vh;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px rgba(195, 195, 195, 0.164);
+}
+
+.mainShop p {
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #cfcfcf;
+}
+
+.mainShop h1 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.mainProducts {
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.mainProducts h1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  color: #a9a9a9;
+}
+
+/* Introduction 1*/
+
+.introductionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.introductionContainerMain h1 {
+  font-size: 90px;
+  text-align: left;
+  font-weight: 150;
+  letter-spacing: 30px;
+  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.introductionContainerMain p {
+  font-size: 20px;
+  text-align: left;
+  font-weight: 150;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  width: 100vh;
+  margin-left: 100px;
+}
+
+/* Introduction 2 */
+
+.introductionContainerSecond {
+  display: flex;
+  flex-direction: column;
+}
+.textSecondMain {
+  margin-top: 10px;
+  margin-bottom: 300px;
+}
+
+.textSecondMain h1 {
+  font-size: 30px;
+  text-align: right;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  color: #a9a9a9;
+}
+
+.textSecondMain p {
+  font-size: 17px;
+  text-align: right;
+  font-weight: 150;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  width: 80vh;
+  margin-left: 100vh;
+  margin-right: 100px;
+  color: #bfbfbf;
+}
