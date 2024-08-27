@@ -1,11 +1,21 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import BackgroundManager from "../components/BackgroundManager";
 import Navbar from "../components/Navbar";
 import data from "../data/products.json";
 import styles from "../styles/Store.module.css";
 
 const Store = () => {
+  const navigate = useNavigate();
+  const handleClickProduct = (productId) => {
+    // Sicherstellen, dass productId nicht null oder undefined ist
+    if (productId != null) {
+      navigate(`/product/${productId}`);
+    } else {
+      console.error("Product ID is undefined");
+    }
+  };
   // Animation Variante für Container
   const variantDefault = () => ({
     hidden: { opacity: 0 },
@@ -170,7 +180,12 @@ const Store = () => {
 
         <div className={styles.mainShop}>
           {data.map((product, index) => (
-            <div key={product.id} className={styles.gridProducts}>
+            <div
+              key={product.id}
+              className={styles.gridProducts}
+              onClick={() => handleClickProduct(product.id)}
+              style={{ cursor: "pointer" }}
+            >
               <motion.img
                 src={product.image_path}
                 alt={product.name}

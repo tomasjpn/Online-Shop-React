@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Gallery from "../pages/Gallery";
 import GFX from "../pages/GFX";
+import ProductPage from "../pages/ProductPage";
 import SearchPage from "../pages/SearchPage";
 import ShoppingCart from "../pages/ShoppingCart";
 import Store from "../pages/Store";
@@ -16,4 +17,5 @@ export const router = createBrowserRouter([
   { path: "/shoppingcart", element: <ShoppingCart /> },
   { path: "/gfx", element: <GFX /> },
   { path: "/vfx", element: <VFX /> },
+  { path: "/product/:productId", element: <ProductPage /> },
 ]);
