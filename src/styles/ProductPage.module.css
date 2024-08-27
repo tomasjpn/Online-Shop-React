@@ -1,3 +1,56 @@
 .body {
-  color: #000000;
+  color: #888;
+}
+
+.mainContainer {
+  display: flex;
+  margin-top: 150px;
+  height: 100vh;
+}
+.textDiv {
+  margin-left: 50px;
+}
+
+.textDiv h1 {
+  margin-bottom: 0px;
+  font-weight: 200;
+  letter-spacing: 15px;
+  font-size: 37px;
+}
+
+.textDiv p {
+  margin-bottom: 0px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+.optionSelect button {
+  color: #888;
+  background: transparent;
+  margin: 5px;
+  margin-top: 50px;
+  padding: 10px;
+  width: 100px;
+  border-radius: 15px;
+  border: 1px solid rgb(126, 174, 255);
+}
+
+.optionSelect button:hover {
+  background-color: #eaeaea;
+}
+
+.optionSelect button.selected {
+  background-color: #535bf2;
+  color: white;
+  border-color: #535bf2;
+}
+
+.buyOption button {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 15px;
 }
