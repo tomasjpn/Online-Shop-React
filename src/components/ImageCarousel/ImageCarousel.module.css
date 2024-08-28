@@ -25,3 +25,24 @@
 .embla button {
   margin: 5px;
 }
+
+.emblaDots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.emblaDot {
+  width: 150px;
+  height: 5px;
+  background-color: #dddddd7a;
+  border-radius: 5%;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.emblaDot.isSelected {
+  background-color: #535bf25b;
+}

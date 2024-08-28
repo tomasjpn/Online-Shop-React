@@ -1,11 +1,16 @@
 .body {
   color: #888;
 }
+.ImageCarousel {
+  margin-bottom: 0px;
+}
 
 .mainContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 150px;
   height: 100vh;
+  margin-bottom: 0px;
 }
 .textDiv {
   margin-left: 50px;
@@ -64,14 +69,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
-.acordion {
+.accordionInfo {
   background-color: #a1a1a11e;
   border-radius: 25px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+  padding-top: 1px;
   width: 500px;
   height: 180px;
+}
+
+.priceTag p {
+  color: #535bf2;
+  font-weight: 400;
+}
+
+.contactInfo {
+  grid-column: span 2;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(45deg, #a0a0a0ad 0%, #ffffff 50%, #a0a0a0a8 100%);
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contactInfo p {
+  margin-top: 15px;
+  max-width: 100vh;
+}
+
+.contactInfo h1 {
+  color: #a3a8ff;
+  margin-bottom: 0px;
+  font-weight: 500;
+  max-width: 100vh;
+  font-size: 50px;
 }
