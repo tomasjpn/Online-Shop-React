@@ -131,7 +131,9 @@ const Store = () => {
       >
         <div className={styles.introductionContainer}>
           <motion.div className={styles.textDiv} variants={variantDefault}>
-            <motion.h1 variants={variant1}>STORE</motion.h1>
+            <motion.h1 variants={variant1}>
+              ST<label>O</label>RE
+            </motion.h1>
             <motion.p variants={variant2}>
               Willkommen in meinem kreativen Design-Shop! Ich biete Ihnen eine
               breite Palette an hochwertigen Design-Dienstleistungen, die darauf
@@ -155,7 +157,7 @@ const Store = () => {
         <div className={styles.introductionContainerSecond}>
           <motion.div className={styles.textDiv} variants={variantDefault}>
             <motion.h1 variants={variant1}>
-              IHRE IDEEN, MEINE KREATIVITÄT
+              IHRE <label>IDEEN</label>, MEINE <label>KREATIVITÄT</label>
             </motion.h1>
             <motion.p variants={variant2}>
               Was auch immer Ihr Projekt ist – ich bin hier, um Ihre Visionen in
@@ -175,7 +177,8 @@ const Store = () => {
         variants={opacity}
       >
         <motion.h1 variants={opacity} initial="hidden" animate="visible">
-          Entfalten Sie Ihre Ideen mit unseren 6 Design-Dienstleistungen
+          Entfalten Sie Ihre Ideen mit unseren <label>6</label>{" "}
+          Design-Dienstleistungen
         </motion.h1>
 
         <div className={styles.mainShop}>

@@ -62,13 +62,13 @@ const ProductPage = () => {
                       <div className={styles.accordionInfo}>
                         <p>
                           In der Basic Option erstelle ich für Sie einen
-                          professionellen Flyer mit Vorder- und Rückseite,
-                          individuell nach Ihren Vorgaben gestaltet. Sie
-                          bestimmen das Design und die Inhalte. Nach dem ersten
-                          Entwurf biete ich Ihnen eine Korrekturrunde an, um
-                          sicherzustellen, dass das Ergebnis Ihren Erwartungen
-                          entspricht. Diese Option eignet sich ideal für
-                          Projekte mit klaren Anforderungen und begrenztem
+                          professionellen {product.name} mit Vorder- und
+                          Rückseite, individuell nach Ihren Vorgaben gestaltet.
+                          Sie bestimmen das Design und die Inhalte. Nach dem
+                          ersten Entwurf biete ich Ihnen eine Korrekturrunde an,
+                          um sicherzustellen, dass das Ergebnis Ihren
+                          Erwartungen entspricht. Diese Option eignet sich ideal
+                          für Projekte mit klaren Anforderungen und begrenztem
                           Budget.
                         </p>
                       </div>
@@ -82,13 +82,14 @@ const ProductPage = () => {
                       <div className={styles.accordionInfo}>
                         <p>
                           Mit der Plus Option erhalten Sie eine erweiterte
-                          Gestaltung Ihres Flyers, einschließlich zwei
+                          Gestaltung Ihres {product.name}, einschließlich zwei
                           Korrekturrunden zur Feinabstimmung. Zusätzlich biete
                           ich Ihnen eine größere Auswahl an Designelementen, wie
-                          besondere Schriftarten und Icons, um Ihrem Flyer eine
-                          persönliche Note zu verleihen. Diese Option ist ideal,
-                          wenn Sie mehr Anpassungsmöglichkeiten benötigen und
-                          einen ansprechenderen Look wünschen.
+                          besondere Schriftarten und Icons, um Ihrem{" "}
+                          {product.name} eine persönliche Note zu verleihen.
+                          Diese Option ist ideal, wenn Sie mehr
+                          Anpassungsmöglichkeiten benötigen und einen
+                          ansprechenderen Look wünschen.
                         </p>
                       </div>
                       <div className={styles.priceTag}>
@@ -105,10 +106,10 @@ const ProductPage = () => {
                           Korrekturrunden und einer umfassenden Designberatung
                           übernehme ich auch die Optimierung Ihrer Inhalte. Auf
                           Wunsch erstelle ich maßgeschneiderte Grafiken und
-                          optimiere Ihren Flyer für verschiedene Druck- und
-                          digitale Formate. Diese Option ist die beste Wahl für
-                          anspruchsvolle Projekte, die professionelle Ergebnisse
-                          erfordern.
+                          optimiere Ihren {product.name} für verschiedene Druck-
+                          und digitale Formate. Diese Option ist die beste Wahl
+                          für anspruchsvolle Projekte, die professionelle
+                          Ergebnisse erfordern.
                         </p>
                       </div>
                       <div className={styles.priceTag}>

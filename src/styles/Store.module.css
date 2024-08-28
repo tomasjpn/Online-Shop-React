@@ -17,6 +17,28 @@
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 2px 2px 15px rgba(195, 195, 195, 0.164);
+  animation: scaleDown 0.1s ease-out;
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.mainShop img:hover {
+  animation: scaleUp 0.3s forwards ease-out;
 }
 
 .mainShop p {
@@ -105,4 +127,12 @@
   margin-left: 100vh;
   margin-right: 100px;
   color: #bfbfbf;
+}
+
+.textDiv label {
+  color: #535bf2;
+}
+
+.mainProducts label {
+  color: #535bf2;
 }

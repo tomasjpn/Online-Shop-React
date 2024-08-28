@@ -11,6 +11,20 @@
   margin-top: 150px;
   height: 100vh;
   margin-bottom: 0px;
+  opacity: 0;
+  animation: scaleAnim 0.5s forwards ease-out;
+}
+@keyframes scaleAnim {
+  from {
+    filter: blur(100px);
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    filter: blur(0px);
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .textDiv {
   margin-left: 50px;
@@ -21,6 +35,8 @@
   font-weight: 200;
   letter-spacing: 15px;
   font-size: 37px;
+  opacity: 0;
+  animation: slideUp 0.8s forwards ease-out;
 }
 
 .textDiv p {
@@ -28,6 +44,19 @@
   font-weight: 100;
   letter-spacing: 0.5px;
   font-size: 16px;
+  opacity: 0;
+  animation: slideUp 1s forwards ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .optionSelect button {
@@ -39,6 +68,7 @@
   width: 100px;
   border-radius: 15px;
   border: 1px solid rgb(126, 174, 255);
+  animation: slideUp 1.2s forwards ease-out;
 }
 
 .optionSelect button:hover {
@@ -58,6 +88,7 @@
   margin-top: 10px;
   width: 200px;
   border-radius: 15px;
+  animation: slideUp 1.3s forwards ease-out;
 }
 
 .buyOption button:hover {
@@ -100,6 +131,8 @@
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 10px;
+  opacity: 0;
+  animation: slideUp 1.5s forwards ease-out;
 }
 
 .contactInfo p {
