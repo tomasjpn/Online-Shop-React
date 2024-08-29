@@ -1,17 +1,18 @@
 // ProductPage.jsx
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useCart } from "../components/CartContext";
 import ImageCarousel from "../components/ImageCarousel/ImageCarousel";
 import Navbar from "../components/Navbar";
 import data from "../data/products.json";
 import styles from "../styles/ProductPage.module.css";
 
 const ProductPage = () => {
-  // UseState für das hinzufügen zum Warenkorb
-  const [cartItems, setCartItems] = useState([]);
-
   // UseState für das auswöhlen der Optionen
   const [selectedOption, setSelectedOption] = useState("");
+
+  // Objekt Destruktion -> addToCart Funktion aus useCart useCart() zu extrahieren
+  const { addToCart } = useCart();
 
   const { productId } = useParams(); // useParams ermöglicht den Zugriff auf die Parameter eines dynamischen Objekts
   // Findet das jeweilige Produkt aus der Datanbank mit der entsprechenden ID
@@ -24,6 +25,18 @@ const ProductPage = () => {
   const handleOptionClick = (option) => {
     // Callback Funktion um den vorherigen Zustand zu bekommen
     setSelectedOption((prev) => (prev === option ? "" : option));
+  };
+
+  // Funktion um das Produkt in den Einkaufswagen hinzuzufügen
+  const handleAddToCart = () => {
+    // Wenn das Produkt und die ausgewählte Option vorhanden ist
+    if (product && selectedOption) {
+      const productWithOption = {
+        ...product,
+        selectedOption: product.options[selectedOption],
+      };
+      addToCart(productWithOption);
+    }
   };
 
   return (
@@ -71,7 +84,7 @@ const ProductPage = () => {
                 </div>
               </div>
               <div className={styles.buyOption}>
-                <button>KAUFEN</button>
+                <button onClick={() => handleAddToCart()}>KAUFEN</button>
               </div>
             </div>
           </>
