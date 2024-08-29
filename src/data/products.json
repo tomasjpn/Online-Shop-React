@@ -4,41 +4,125 @@
     "name": "Flyer Design",
     "price": "~20-30€",
     "description": "Lassen Sie sich einen individuellen Flyer erstellen, der Ihre Botschaft präzise und ästhetisch vermittelt. Ideal für Veranstaltungen, Werbeaktionen und Geschäftspräsentationen.",
-    "image_path": "/assets/productImg/Unbenannt-1.png"
+    "image_path": "/assets/productImg/Unbenannt-1.png",
+    "options": {
+      "basic": {
+        "description": "In der Basic Option erstelle ich für Sie einen professionellen Flyer mit Vorder- und Rückseite, individuell nach Ihren Vorgaben gestaltet. Sie bestimmen das Design und die Inhalte. Nach dem ersten Entwurf biete ich Ihnen eine Korrekturrunde an, um sicherzustellen, dass das Ergebnis Ihren Erwartungen entspricht. Diese Option eignet sich ideal für Projekte mit klaren Anforderungen und begrenztem Budget.",
+        "price": "19,99€"
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie eine erweiterte Gestaltung Ihres Flyers, einschließlich zwei Korrekturrunden zur Feinabstimmung. Zusätzlich biete ich Ihnen eine größere Auswahl an Designelementen, wie besondere Schriftarten und Icons, um Ihrem Flyer eine persönliche Note zu verleihen. Diese Option ist ideal, wenn Sie mehr Anpassungsmöglichkeiten benötigen und einen ansprechenderen Look wünschen.",
+        "price": "24,99€"
+      },
+      "premium": {
+        "description": "In der Premium Option biete ich Ihnen das Maximum an Individualität und Perfektion. Neben drei Korrekturrunden und einer umfassenden Designberatung übernehme ich auch die Optimierung Ihrer Inhalte. Auf Wunsch erstelle ich maßgeschneiderte Grafiken und optimiere Ihren Flyer für verschiedene Druck- und digitale Formate. Diese Option ist die beste Wahl für anspruchsvolle Projekte, die professionelle Ergebnisse erfordern.",
+        "price": "29,99€"
+      }
+    }
   },
   {
     "id": 2,
     "name": "Social Media Design",
     "price": "~20-30€",
     "description": "Stechen Sie in den sozialen Medien hervor mit maßgeschneiderten Designs, die Ihre Marke und Inhalte optimal in Szene setzen. Perfekt für Posts, Stories und Anzeigen.",
-    "image_path": "/assets/productImg/Unbenannt-2.png"
+    "image_path": "/assets/productImg/Unbenannt-2.png",
+    "options": {
+      "basic": {
+        "description": "In der Basic Option erstelle ich für Sie ein professionelles Social Media Design mit Vorder- und Rückseite, individuell nach Ihren Vorgaben gestaltet. Sie bestimmen das Design und die Inhalte. Nach dem ersten Entwurf biete ich Ihnen eine Korrekturrunde an, um sicherzustellen, dass das Ergebnis Ihren Erwartungen entspricht. Diese Option eignet sich ideal für Projekte mit klaren Anforderungen und begrenztem Budget.",
+        "price": "19,99€"
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie eine erweiterte Gestaltung Ihres Social Media Design, einschließlich zwei Korrekturrunden zur Feinabstimmung. Zusätzlich biete ich Ihnen eine größere Auswahl an Designelementen, wie besondere Schriftarten und Icons, um Ihr Social Media Design eine persönliche Note zu verleihen. Diese Option ist ideal, wenn Sie mehr Anpassungsmöglichkeiten benötigen und einen ansprechenderen Look wünschen.",
+        "price": "24,99€"
+      },
+      "premium": {
+        "description": "In der Premium Option biete ich Ihnen das Maximum an Individualität und Perfektion. Neben drei Korrekturrunden und einer umfassenden Designberatung übernehme ich auch die Optimierung Ihrer Inhalte. Auf Wunsch erstelle ich maßgeschneiderte Grafiken und optimiere Ihr Social Media Design für verschiedene Druck- und digitale Formate. Diese Option ist die beste Wahl für anspruchsvolle Projekte, die professionelle Ergebnisse erfordern.",
+        "price": "29,99€"
+      }
+    }
   },
   {
     "id": 5,
     "name": "Visual Effects Video",
     "price": "~40-90€",
     "description": "Erwecken Sie Ihre Videoprojekte mit atemberaubenden visuellen Effekten zum Leben. Ideal für Filme, Musikvideos oder Werbeclips, die beeindrucken sollen.",
-    "image_path": "/assets/productImg/Unbenannt-5.png"
+    "image_path": "/assets/productImg/Unbenannt-5.png",
+    "options": {
+      "basic": {
+        "description": "In der Basic Option erstelle ich für Sie ein professionelles Visual Effects Video, individuell nach Ihren Vorgaben gestaltet. Sie bestimmen die Effekte und Inhalte. Nach dem ersten Entwurf biete ich Ihnen eine Korrekturrunde an, um sicherzustellen, dass das Ergebnis Ihren Erwartungen entspricht. Diese Option eignet sich ideal für Projekte mit klaren Anforderungen und begrenztem Budget.",
+        "price": "39,99€"
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie eine erweiterte Gestaltung Ihres Visual Effects Videos, einschließlich zwei Korrekturrunden zur Feinabstimmung. Zusätzlich biete ich Ihnen eine größere Auswahl an visuellen Effekten, wie besondere Übergänge und Animationen, um Ihrem Video eine persönliche Note zu verleihen. Diese Option ist ideal, wenn Sie mehr Anpassungsmöglichkeiten benötigen und ein beeindruckenderes Ergebnis wünschen.",
+        "price": "74,99€"
+      },
+      "premium": {
+        "description": "In der Premium Option biete ich Ihnen das Maximum an Individualität und Perfektion. Neben drei Korrekturrunden und einer umfassenden Beratung übernehme ich auch die Optimierung Ihrer Inhalte. Auf Wunsch erstelle ich maßgeschneiderte visuelle Effekte und optimiere Ihr Video für verschiedene Plattformen und Formate. Diese Option ist die beste Wahl für anspruchsvolle Projekte, die professionelle Ergebnisse erfordern.",
+        "price": "89,99€"
+      }
+    }
   },
   {
     "id": 3,
     "name": "Motion Design",
     "price": "~50-100€",
     "description": "Bringen Sie Ihre Ideen zum Leben mit dynamischen Animationen und Motion Graphics. Ideal für Werbevideos, Erklärfilme und digitale Präsentationen.",
-    "image_path": "/assets/productImg/Unbenannt-3.png"
+    "image_path": "/assets/productImg/Unbenannt-3.png",
+    "options": {
+      "basic": {
+        "description": "In der Basic Option erstelle ich für Sie ein einfaches Motion Design Video, das durch klare und effektive Animationen überzeugt. Eine Korrekturrunde ist inbegriffen, um sicherzustellen, dass das Endergebnis Ihren Vorstellungen entspricht. Perfekt für Projekte mit einem begrenzten Budget.",
+        "price": "49,99€"
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie ein erweitertes Motion Design Video mit komplexeren Animationen und zwei Korrekturrunden zur Feinabstimmung. Ideal für Projekte, die mehr Detail und Kreativität erfordern.",
+        "price": "74,99€"
+      },
+      "premium": {
+        "description": "Die Premium Option bietet ein maßgeschneidertes Motion Design Video mit maximaler Individualität. Sie erhalten drei Korrekturrunden, umfassende Beratung und einzigartige Animationen, die speziell auf Ihre Anforderungen zugeschnitten sind.",
+        "price": "99,99€"
+      }
+    }
   },
   {
     "id": 4,
     "name": "Logo Design",
     "price": "~10-20€",
     "description": "Einzigartige und professionelle Logos, die Ihre Markenidentität widerspiegeln und einen bleibenden Eindruck hinterlassen. Perfekt für neue Unternehmen oder Rebrandings.",
-    "image_path": "/assets/productImg/Unbenannt-4.png"
+    "image_path": "/assets/productImg/Unbenannt-4.png",
+    "options": {
+      "basic": {
+        "description": "In der Basic Option erstelle ich für Sie ein einfaches, aber effektives Logo, das Ihre Markenidentität widerspiegelt. Eine Korrekturrunde ist inbegriffen, um sicherzustellen, dass das Logo Ihren Vorstellungen entspricht.",
+        "price": "9,99€"
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie ein detaillierteres Logo-Design mit zwei Korrekturrunden zur Feinabstimmung. Diese Option bietet mehr Flexibilität bei der Gestaltung und ermöglicht zusätzliche Designelemente.",
+        "price": "14,99€"
+      },
+      "premium": {
+        "description": "Die Premium Option bietet ein vollständig maßgeschneidertes Logo-Design, das perfekt auf Ihre Marke abgestimmt ist. Sie erhalten drei Korrekturrunden und eine umfassende Designberatung, um sicherzustellen, dass Ihr Logo einzigartig und professionell ist.",
+        "price": "19,99€"
+      }
+    }
   },
   {
     "id": 6,
     "name": "Image Editing",
     "price": "~10-30€",
     "description": "Perfektionieren Sie Ihre Bilder mit professioneller Bildbearbeitung. Entfernen Sie unerwünschte Elemente, optimieren Sie Farben und verbessern Sie die Gesamtästhetik.",
-    "image_path": "/assets/productImg/Unbenannt-6.png"
+    "image_path": "/assets/productImg/Unbenannt-6.png",
+    "options": {
+      "basic": {
+        "description": "In der Basic Option biete ich einfache Bildbearbeitung an, um Ihre Fotos zu optimieren. Diese Option umfasst eine Korrekturrunde und eignet sich für grundlegende Verbesserungen wie Farbkorrekturen und das Entfernen kleinerer Makel.",
+        "price": "9,99€"
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie eine erweiterte Bildbearbeitung, die zwei Korrekturrunden umfasst. Diese Option bietet umfangreichere Anpassungen wie das Retuschieren von Bildern und das Hinzufügen von speziellen Effekten.",
+        "price": "19,99€"
+      },
+      "premium": {
+        "description": "Die Premium Option bietet eine umfassende und individuelle Bildbearbeitung, einschließlich drei Korrekturrunden und professioneller Retusche. Ideal für Projekte, die höchste Ansprüche an die Bildqualität stellen.",
+        "price": "29,99€"
+      }
+    }
   }
 ]

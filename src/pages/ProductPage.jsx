@@ -7,6 +7,10 @@ import data from "../data/products.json";
 import styles from "../styles/ProductPage.module.css";
 
 const ProductPage = () => {
+  // UseState für das hinzufügen zum Warenkorb
+  const [cartItems, setCartItems] = useState([]);
+
+  // UseState für das auswöhlen der Optionen
   const [selectedOption, setSelectedOption] = useState("");
 
   const { productId } = useParams(); // useParams ermöglicht den Zugriff auf die Parameter eines dynamischen Objekts
@@ -34,86 +38,33 @@ const ProductPage = () => {
 
             <div className={styles.textDiv}>
               <h1>{product.name.toUpperCase()}</h1>
-              <p>{product.description}</p>
+              <div className={styles.infoText}>
+                <p>{product.description}</p>
+              </div>
               <div className={styles.optionSelect}>
-                <button
-                  className={selectedOption === "basic" ? styles.selected : ""}
-                  onClick={() => handleOptionClick("basic")}
-                >
-                  BASIC
-                </button>
-                <button
-                  className={selectedOption === "plus" ? styles.selected : ""}
-                  onClick={() => handleOptionClick("plus")}
-                >
-                  PLUS
-                </button>
-                <button
-                  className={
-                    selectedOption === "premium" ? styles.selected : ""
-                  }
-                  onClick={() => handleOptionClick("premium")}
-                >
-                  PREMIUM
-                </button>
+                {/* Object.keys() -> Gibt ein Array der Schlüssek eines Objekts wieder: basic, plus, premium*/}
+                {Object.keys(product.options).map((optionKey) => (
+                  // Für jeden Key wird ein Button erstellt
+                  <button
+                    key={optionKey}
+                    className={
+                      selectedOption === optionKey ? styles.selected : ""
+                    }
+                    onClick={() => handleOptionClick(optionKey)}
+                  >
+                    {optionKey.toUpperCase()}
+                  </button>
+                ))}
+
                 <div className={styles.accordionContainer}>
-                  {selectedOption === "basic" && (
+                  {selectedOption && (
                     <div className={styles.acordion}>
                       <div className={styles.accordionInfo}>
-                        <p>
-                          In der Basic Option erstelle ich für Sie einen
-                          professionellen {product.name} mit Vorder- und
-                          Rückseite, individuell nach Ihren Vorgaben gestaltet.
-                          Sie bestimmen das Design und die Inhalte. Nach dem
-                          ersten Entwurf biete ich Ihnen eine Korrekturrunde an,
-                          um sicherzustellen, dass das Ergebnis Ihren
-                          Erwartungen entspricht. Diese Option eignet sich ideal
-                          für Projekte mit klaren Anforderungen und begrenztem
-                          Budget.
-                        </p>
+                        {/* in der Product Liste -> unter den Options -> Index bei dem ausgewählten Option, die Beschriebung davon wählen*/}
+                        <p>{product.options[selectedOption].description}</p>
                       </div>
                       <div className={styles.priceTag}>
-                        <p>Preis: 19,99€</p>
-                      </div>
-                    </div>
-                  )}
-                  {selectedOption === "plus" && (
-                    <div className={styles.acordion}>
-                      <div className={styles.accordionInfo}>
-                        <p>
-                          Mit der Plus Option erhalten Sie eine erweiterte
-                          Gestaltung Ihres {product.name}, einschließlich zwei
-                          Korrekturrunden zur Feinabstimmung. Zusätzlich biete
-                          ich Ihnen eine größere Auswahl an Designelementen, wie
-                          besondere Schriftarten und Icons, um Ihrem{" "}
-                          {product.name} eine persönliche Note zu verleihen.
-                          Diese Option ist ideal, wenn Sie mehr
-                          Anpassungsmöglichkeiten benötigen und einen
-                          ansprechenderen Look wünschen.
-                        </p>
-                      </div>
-                      <div className={styles.priceTag}>
-                        <p>Preis: 24,99€</p>
-                      </div>
-                    </div>
-                  )}
-                  {selectedOption === "premium" && (
-                    <div className={styles.acordion}>
-                      <div className={styles.accordionInfo}>
-                        <p>
-                          In der Premium Option biete ich Ihnen das Maximum an
-                          Individualität und Perfektion. Neben drei
-                          Korrekturrunden und einer umfassenden Designberatung
-                          übernehme ich auch die Optimierung Ihrer Inhalte. Auf
-                          Wunsch erstelle ich maßgeschneiderte Grafiken und
-                          optimiere Ihren {product.name} für verschiedene Druck-
-                          und digitale Formate. Diese Option ist die beste Wahl
-                          für anspruchsvolle Projekte, die professionelle
-                          Ergebnisse erfordern.
-                        </p>
-                      </div>
-                      <div className={styles.priceTag}>
-                        <p>Preis: 29,99€</p>
+                        <p>Preis: {product.options[selectedOption].price}</p>
                       </div>
                     </div>
                   )}

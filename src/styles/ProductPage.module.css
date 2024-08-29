@@ -39,7 +39,7 @@
   animation: slideUp 0.8s forwards ease-out;
 }
 
-.textDiv p {
+.infoText p {
   margin-bottom: 0px;
   font-weight: 100;
   letter-spacing: 0.5px;
@@ -112,6 +112,23 @@
   padding-top: 1px;
   width: 500px;
   height: 180px;
+  animation: slideDown 1s forwards ease-out;
+}
+
+.accordionContainer p {
+  opacity: 0;
+  animation: slideDown 1s forwards ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .priceTag p {
