@@ -1,0 +1,81 @@
+.cartContainer {
+  color: #888;
+  height: 100vh;
+}
+
+.containerList {
+}
+
+.containerListItems h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.containerListItems h3 {
+  font-size: 14px;
+
+  margin: 10px;
+}
+
+.containerList p {
+  font-size: 10px;
+}
+
+.containerListItems {
+  display: flex;
+  margin: 10px;
+  background-color: #adadad27;
+  border-radius: 10px;
+  width: 100vh;
+  align-items: center;
+  padding: 10px;
+}
+
+.containerListItems img {
+  width: 15vh;
+  height: 70px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.descContainer {
+  margin-right: 100px;
+  margin-left: 10px;
+}
+
+.amountContainer {
+  display: flex;
+  margin-right: 0px;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.amountContainer button {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+.amountContainer p {
+  border: #888;
+  padding: 10px;
+  border: 1px solid rgb(126, 174, 255);
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  line-height: 20px;
+}
+
+.priceContainer {
+  margin-left: 100px;
+}

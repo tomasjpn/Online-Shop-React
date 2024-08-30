@@ -14,6 +14,7 @@ import image1PD from "../assets/andereBilder/PolitikProjekt.png";
 // Social Media Fortnite Banner
 import image1B from "../assets/andereBilder/Scxfz green.png";
 import image2B from "../assets/andereBilder/senriyt.png";
+
 export {
   image1B,
   image1D,

@@ -1,32 +1,44 @@
 import BackgroundManager from "../components/BackgroundManager.js";
 import { useCart } from "../components/CartContext.jsx";
 import Navbar from "../components/Navbar";
+import styles from "../styles/ShoppingCart.module.css";
 
 // Einkaufswagen Page
 const ShoppingCart = () => {
-  const { cartItems } = useCart();
+  const { cartItems, increaseQuantity, decreaseQuantity } = useCart();
 
   console.log(cartItems);
   return (
-    <div>
+    <div className={styles.mainContainer}>
       <BackgroundManager />
-      <Navbar />
+      <Navbar fixed={false} />
       <h1>Shopping Cart</h1>
-      {cartItems.length === 0 ? (
-        <p>Your cart is empty</p>
-      ) : (
-        <ul>
-          {cartItems.map((product, index) => (
-            <li key={index}>
-              <h1>{product.name}</h1>
-              <h2>{product.selectedOption.quantity}</h2>
-              <h3>{product.selectedOption.option}</h3>
-              {product.selectedOption?.description ||
-                "Keine Option ausgewählts"}
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className={styles.cartContainer}>
+        {cartItems.length === 0 ? (
+          <p>Your cart is empty</p>
+        ) : (
+          <div className={styles.containerList}>
+            <ul>
+              {cartItems.map((product, index) => (
+                <div key={index} className={styles.containerListItems}>
+                  <img src={product.image_path}></img>
+                  <div className={styles.descContainer}>
+                    <h1>{product.name}</h1>
+                    <h3>{product.selectedOption.name}</h3>
+                  </div>
+                  <div className={styles.amountContainer}>
+                    <button onClick={() => decreaseQuantity(product)}>-</button>
+                    <p>{product.selectedOption.quantity}</p>
+                    <button onClick={() => increaseQuantity(product)}>+</button>
+                  </div>
+                  <div className={styles.priceContainer}></div>
+                  <h3>{product.selectedOption.price}</h3>
+                </div>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

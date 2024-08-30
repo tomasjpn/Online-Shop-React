@@ -48,9 +48,51 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  // Funktion um die Menge des Produktes zu erhöhen
+  const increaseQuantity = (product) => {
+    setCartItems((prevItem) => {
+      // Überprüft, ob das aktuelle item das kleiche Produkt ist, dessen Menge geändert werden sollte
+      return prevItem.map((item) =>
+        item.id === product.id &&
+        item.selectedOption.name === product.selectedOption.name
+          ? {
+              // Objekt mit der um 1 erhöhten Menge
+              ...item,
+              selectedOption: {
+                ...item.selectedOption,
+                quantity: item.selectedOption.quantity + 1,
+              },
+            }
+          : item
+      );
+    });
+  };
+
+  // Funktion um die Menge des Produktes zu verringern
+  const decreaseQuantity = (product) => {
+    setCartItems((prevItem) => {
+      // Überprüft, ob das aktuelle item das kleiche Produkt ist, dessen Menge geändert werden sollte
+      return prevItem.map((item) =>
+        item.id === product.id &&
+        item.selectedOption.name === product.selectedOption.name
+          ? {
+              // Objekt mit der um 1 verringerten Menge
+              ...item,
+              selectedOption: {
+                ...item.selectedOption,
+                quantity: item.selectedOption.quantity - 1,
+              },
+            }
+          : item
+      );
+    });
+  };
+
   return (
     /* gibt an alle untergeordneten Komponenten weiter */
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, increaseQuantity, decreaseQuantity }}
+    >
       {/* Die untergeordneten Komponenten, die den Context verwenden können */}
       {children}
     </CartContext.Provider>
