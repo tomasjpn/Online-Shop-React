@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 // Einkaufswagen Page
 const ShoppingCart = () => {
   const { cartItems } = useCart();
+
+  console.log(cartItems);
   return (
     <div>
       <BackgroundManager />
@@ -16,7 +18,9 @@ const ShoppingCart = () => {
         <ul>
           {cartItems.map((product, index) => (
             <li key={index}>
-              <h1>{product.name}</h1> -{" "}
+              <h1>{product.name}</h1>
+              <h2>{product.selectedOption.quantity}</h2>
+              <h3>{product.selectedOption.option}</h3>
               {product.selectedOption?.description ||
                 "Keine Option ausgewählts"}
             </li>

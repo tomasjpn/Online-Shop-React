@@ -10,7 +10,42 @@ export const CartProvider = ({ children }) => {
 
   // Funktion um die Produkte zum Einkaufswagen hinzuzufügen
   const addToCart = (product) => {
-    setCartItems((prevItems) => [...prevItems, product]);
+    setCartItems((prevItems) => {
+      // Findet das gesuchte Produkt mit der übereinstimmenden ID
+      const existingProductIndex = prevItems.findIndex(
+        (item) =>
+          item.id === product.id &&
+          item.selectedOption.name === product.selectedOption.name
+      );
+
+      // Wenn dieses Produkt bereits im Warenkorb vorhanden ist:
+      if (existingProductIndex !== -1) {
+        const updatedItems = [...prevItems]; // Erstellt eine Kopie des vorherigen Arrays
+        const existingProduct = updatedItems[existingProductIndex]; // Das Index i = existingProductIndex -> in den neu kopierten Array, soll genau das Produkt ausgewählt werden, um dem es sich gerade handelt
+
+        // greift auf das Produkt, dessen Menge erhöht werden muss
+        updatedItems[existingProductIndex] = {
+          // Ein Objekt mit dem gesamten Produkt
+          ...existingProduct,
+          selectedOption: {
+            // Kopiert alle Eigenschaften des selectedOption Objekt
+            ...existingProduct.selectedOption,
+            // Aktuelle Menge wird um 1 erhöht
+            quantity: existingProduct.selectedOption.quantity + 1,
+          },
+        };
+        return updatedItems;
+      } else {
+        // Alle alten Produkte + das neue Produkt
+        return [
+          ...prevItems,
+          {
+            ...product,
+            selectedOption: { ...product.selectedOption, quantity: 1 },
+          },
+        ];
+      }
+    });
   };
 
   return (

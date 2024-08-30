@@ -33,8 +33,15 @@ const ProductPage = () => {
     if (product && selectedOption) {
       const productWithOption = {
         ...product,
-        selectedOption: product.options[selectedOption],
+        selectedOption: {
+          // Name der ausgewählten Option
+          name: selectedOption,
+          // Kopiert die Eigentschaften des Objekts options
+          ...product.options[selectedOption],
+        },
       };
+
+      // Das Objekt wird anschließend addToCart() aus der useCart Hook übergeben
       addToCart(productWithOption);
     }
   };
