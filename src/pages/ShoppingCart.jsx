@@ -5,7 +5,8 @@ import styles from "../styles/ShoppingCart.module.css";
 
 // Einkaufswagen Page
 const ShoppingCart = () => {
-  const { cartItems, increaseQuantity, decreaseQuantity } = useCart();
+  const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart } =
+    useCart();
 
   console.log(cartItems);
   return (
@@ -31,8 +32,13 @@ const ShoppingCart = () => {
                     <p>{product.selectedOption.quantity}</p>
                     <button onClick={() => increaseQuantity(product)}>+</button>
                   </div>
-                  <div className={styles.priceContainer}></div>
-                  <h3>{product.selectedOption.price}</h3>
+                  <div className={styles.priceContainer}>
+                    <h3>{product.selectedOption.price}</h3>
+                  </div>
+
+                  <div className={styles.removeContainer}>
+                    <button onClick={() => removeFromCart(product)}>X</button>
+                  </div>
                 </div>
               ))}
             </ul>

@@ -72,18 +72,34 @@ export const CartProvider = ({ children }) => {
   const decreaseQuantity = (product) => {
     setCartItems((prevItem) => {
       // Überprüft, ob das aktuelle item das kleiche Produkt ist, dessen Menge geändert werden sollte
-      return prevItem.map((item) =>
-        item.id === product.id &&
-        item.selectedOption.name === product.selectedOption.name
-          ? {
-              // Objekt mit der um 1 verringerten Menge
-              ...item,
-              selectedOption: {
-                ...item.selectedOption,
-                quantity: item.selectedOption.quantity - 1,
-              },
-            }
-          : item
+      return prevItem
+        .map((item) =>
+          item.id === product.id &&
+          item.selectedOption.name === product.selectedOption.name
+            ? {
+                // Objekt mit der um 1 verringerten Menge
+                ...item,
+                selectedOption: {
+                  ...item.selectedOption,
+                  quantity: item.selectedOption.quantity - 1,
+                },
+              }
+            : item
+        )
+        .filter((item) => item.selectedOption.quantity > 0);
+    });
+  };
+
+  // Funktion um das ausgewählte Produkt vom Warenkorb zu enternen
+  const removeFromCart = (product) => {
+    setCartItems((prevItems) => {
+      // filter() -> erstellt ein neues Array ohne das übergebene "product"
+      return prevItems.filter(
+        (item) =>
+          !(
+            item.id === product.id &&
+            item.selectedOption.name === product.selectedOption.name
+          )
       );
     });
   };
@@ -91,7 +107,13 @@ export const CartProvider = ({ children }) => {
   return (
     /* gibt an alle untergeordneten Komponenten weiter */
     <CartContext.Provider
-      value={{ cartItems, addToCart, increaseQuantity, decreaseQuantity }}
+      value={{
+        cartItems,
+        addToCart,
+        increaseQuantity,
+        decreaseQuantity,
+        removeFromCart,
+      }}
     >
       {/* Die untergeordneten Komponenten, die den Context verwenden können */}
       {children}

@@ -10,6 +10,7 @@
   font-size: 20px;
   font-weight: bold;
   margin: 10px;
+  max-width: 90px;
 }
 
 .containerListItems h3 {
@@ -78,4 +79,23 @@
 
 .priceContainer {
   margin-left: 100px;
+}
+
+.removeContainer {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.removeContainer button {
+  background-color: transparent;
+  color: #a8a8a8;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.removeContainer button:hover {
+  background-color: transparent;
+  color: #004eb4;
+  font-weight: lighter;
+  font-size: 18px;
 }
