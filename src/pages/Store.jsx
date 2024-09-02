@@ -182,24 +182,32 @@ const Store = () => {
         </motion.h1>
 
         <div className={styles.mainShop}>
-          {data.map((product, index) => (
-            <div
-              key={product.id}
-              className={styles.gridProducts}
-              onClick={() => handleClickProduct(product.id)}
-              style={{ cursor: "pointer" }}
-            >
-              <motion.img
-                src={product.image_path}
-                alt={product.name}
-                variants={variants[index % variants.length]}
-              ></motion.img>
+          {data.map((product) => {
+            // Überprüft, ob das Medienfeld existiert und ein Array ist
+            const media = Array.isArray(product.media) ? product.media : [];
+            // Bildpfad überprüfen
+            const imagePath =
+              media.length > 0 && media[0].path ? media[0].path : "";
 
-              <motion.p variants={variants[index % variants.length]}>
-                {product.price}
-              </motion.p>
-            </div>
-          ))}
+            return (
+              <div
+                key={product.id}
+                className={styles.gridProducts}
+                onClick={() => handleClickProduct(product.id)}
+                style={{ cursor: "pointer" }}
+              >
+                <motion.img
+                  src={imagePath}
+                  alt={product.name}
+                  variants={variants[product.id % variants.length]} // Sicherstellen, dass der Index im Bereich der Variants liegt
+                ></motion.img>
+
+                <motion.p variants={variants[product.id % variants.length]}>
+                  {product.price}
+                </motion.p>
+              </div>
+            );
+          })}
         </div>
       </motion.section>
     </div>

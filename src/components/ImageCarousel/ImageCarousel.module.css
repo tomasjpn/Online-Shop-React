@@ -14,12 +14,25 @@
   flex: 0 0 100%;
   min-width: 0;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .emblaSlide img {
   width: 100%;
-  height: auto;
+  max-height: 50vh;
   border-radius: 10px;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .embla button {

@@ -53,7 +53,7 @@ const ProductPage = () => {
         {product ? (
           <>
             <div className={styles.ImageCarousel}>
-              <ImageCarousel />
+              <ImageCarousel productId={product.id} />
             </div>
 
             <div className={styles.textDiv}>
@@ -62,7 +62,8 @@ const ProductPage = () => {
                 <p>{product.description}</p>
               </div>
               <div className={styles.optionSelect}>
-                {/* Object.keys() -> Gibt ein Array der Schlüssek eines Objekts wieder: basic, plus, premium*/}
+                {/* Object.keys() -> Gibt ein Array der Schlüssel eines Objekts wieder: basic, plus, premium*/}
+
                 {Object.keys(product.options).map((optionKey) => (
                   // Für jeden Key wird ein Button erstellt
                   <button

@@ -171,7 +171,7 @@ const VFX = () => {
           <iframe
             src="https://drive.google.com/file/d/1_uiGMI8o_snSmzqlSIRQlb9uggj-Q5zk/preview"
             width="800 "
-            height="450 "
+            height="450"
             allow="accelerometer; autoplay; gyroscope; picture-in-picture"
             frameBorder="0"
             allowFullScreen

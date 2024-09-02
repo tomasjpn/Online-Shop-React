@@ -1,12 +1,17 @@
 import useEmblaCarousel from "embla-carousel-react";
+import PropTypes from "prop-types";
 import { useCallback, useEffect, useState } from "react";
+import data from "../../data/products.json";
 import styles from "../ImageCarousel/ImageCarousel.module.css";
-import img from "/assets/productImg/Unbenannt-1.png";
 
-export default function ImageCarousel() {
+export default function ImageCarousel({ productId }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
+
+  // Finde das Produkt mit der gegebenen ID
+  const selectedProduct = data.find((product) => product.id === productId);
+  const imagePaths = selectedProduct ? selectedProduct.media : []; // Wenn das Produkt Objekt gefunden wurde, wird das entsprechende image_path Array ausgewählt
 
   // Wechseln auf das vorherige Bild
   const scrollPrev = useCallback(() => {
@@ -34,15 +39,31 @@ export default function ImageCarousel() {
   return (
     <div className={styles.embla} ref={emblaRef}>
       <div className={styles.emblaContainer}>
-        <div className={styles.emblaSlide}>
-          <img src={img} alt="Slide 1" />
-        </div>
-        <div className={styles.emblaSlide}>
-          <img src={img} alt="Slide 2" />
-        </div>
-        <div className={styles.emblaSlide}>
-          <img src={img} alt="Slide 3" />
-        </div>
+        {imagePaths.length > 0 ? (
+          imagePaths.map((item, index) => (
+            <div className={styles.emblaSlide} key={index}>
+              {item.type === "image" ? (
+                <img src={item.path} alt={`Slide ${index + 1}`} />
+              ) : item.type === "video" ? (
+                <div className={styles.video}>
+                  <iframe
+                    src={item.path}
+                    width="650"
+                    height="450"
+                    allow="accelerometer; autoplay; gyroscope; picture-in-picture"
+                    frameBorder="0"
+                    allowFullScreen
+                    title={`Video ${index + 1}`}
+                  ></iframe>
+                </div>
+              ) : (
+                <p>Unsupported media type</p>
+              )}
+            </div>
+          ))
+        ) : (
+          <p>No media available</p>
+        )}
       </div>
 
       <div className={styles.emblaDots}>
@@ -66,3 +87,7 @@ export default function ImageCarousel() {
     </div>
   );
 }
+
+ImageCarousel.propTypes = {
+  productId: PropTypes.number.isRequired,
+};
