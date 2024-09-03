@@ -4,6 +4,7 @@ import backgroundImage1 from "../assets/GFX.png";
 import backgroundImage2 from "../assets/VFX.png";
 import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop.jsx";
 import styles from "../styles/Gallery.module.css";
 
 const Gallery = () => {
@@ -60,6 +61,7 @@ const Gallery = () => {
   return (
     <div className={`${styles.galleryMainArea} ${styles[animation]}`}>
       <BackgroundManager />
+      <ScrollToTop />
       <Navbar className={styles.Navbar} fixed={false} />
       <div className={styles.mainArea}>
         <div className={styles.optionGallery}>

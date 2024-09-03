@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BackgroundManager from "../components/BackgroundManager";
 import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
 import data from "../data/products.json";
 import styles from "../styles/Store.module.css";
 
@@ -121,6 +122,7 @@ const Store = () => {
   return (
     <div className={styles.body}>
       <BackgroundManager />
+      <ScrollToTop />
       <Navbar fixed={true} />
 
       {/* Introduction 1*/}

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import image from "./assets/25231.png";
 import BackgroundManager from "./components/BackgroundManager";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 import "./styles/App.css";
 import styles from "./styles/Home.module.css";
 
@@ -22,6 +23,7 @@ function App() {
     <div className={isAnimating ? styles.slideUpEnd : ""}>
       <BackgroundManager />
       <Navbar fixed={false} />
+      <ScrollToTop />
       <div className={styles.mainArea}>
         <div className={styles.mainAreaTitle}>
           <h1>Tomas Pham</h1>

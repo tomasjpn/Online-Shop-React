@@ -1,15 +1,21 @@
 // ProductPage.jsx
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useCart } from "../components/CartContext";
 import ImageCarousel from "../components/ImageCarousel/ImageCarousel";
 import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
 import data from "../data/products.json";
 import styles from "../styles/ProductPage.module.css";
 
 const ProductPage = () => {
   // UseState für das auswöhlen der Optionen
   const [selectedOption, setSelectedOption] = useState("");
+
+  //UseState für die Warenkorb Bestätigung
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
+  const [showShoppingCartBtn, setShowShoppingCartBtn] = useState(false);
 
   // Objekt Destruktion -> addToCart Funktion aus useCart useCart() zu extrahieren
   const { addToCart } = useCart();
@@ -43,12 +49,41 @@ const ProductPage = () => {
 
       // Das Objekt wird anschließend addToCart() aus der useCart Hook übergeben
       addToCart(productWithOption);
+
+      showConfirmationInfo(); // Bestätigungsfenster anzeigen
+      setShowShoppingCartBtn(true);
     }
+  };
+
+  // Bestätigung für das Hinzufügen zum Einkaufswagen
+  const showConfirmationInfo = () => {
+    setShowConfirmation(true); // Anzeigen der Bestätigung
+
+    const id = setTimeout(() => {
+      // nach 5 Sekunden wird die Anzeige ausgeblendet
+      setShowConfirmation(false);
+    }, 5000);
+
+    setTimeoutId(id);
+  };
+
+  // Bestätitung skippen
+  const cancelConfirmation = () => {
+    clearTimeout(timeoutId); // Timer gelöscht
+    setShowConfirmation(false); // Bestätigung ausgeblendet
   };
 
   return (
     <div className={styles.body}>
       <Navbar fixed={true} />
+      <ScrollToTop />
+      {/* Bestätigungsfenster */}
+      {showConfirmation && (
+        <div className={styles.confirmationInfo} onClick={cancelConfirmation}>
+          <p>In Warenkorb hinzugefügt!</p>
+          <button onClick={cancelConfirmation}>X</button>
+        </div>
+      )}
       <div className={styles.mainContainer}>
         {product ? (
           <>
@@ -94,6 +129,13 @@ const ProductPage = () => {
               <div className={styles.buyOption}>
                 <button onClick={() => handleAddToCart()}>KAUFEN</button>
               </div>
+              {showShoppingCartBtn && (
+                <div className={styles.shoppingCart}>
+                  <Link to="/shoppingcart" className="shopping-cart">
+                    <button>ZUM WARENKORB</button>
+                  </Link>
+                </div>
+              )}
             </div>
           </>
         ) : (

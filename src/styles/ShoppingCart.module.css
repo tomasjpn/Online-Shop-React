@@ -191,12 +191,17 @@
   margin-left: 5px;
 }
 
-.paymentContainer button {
+.confirmOrder button {
   width: 50vh;
   background-color: #849afa;
 }
 
-.paymentContainer button:hover {
+.returnStore button {
+  background-color: #b9b9b9;
+  margin: 10px;
+}
+
+.confirmOrder button:hover {
   width: 50vh;
   background-color: #4f61b8;
 }
