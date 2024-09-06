@@ -1,0 +1,45 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContainer input {
+  background-color: #adadad0c;
+  border-radius: 15px;
+  padding: 10px;
+  color: #849afa;
+  width: 40vh;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid rgb(126, 174, 255);
+  outline: none;
+}
+
+.inputContainer input::placeholder {
+  color: #8888883f;
+  opacity: 1;
+}
+
+.selectOptions select {
+  background-color: #849afa;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+
+.selectOptions option {
+  background-color: #bcbcbc4a;
+  padding: 40px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}

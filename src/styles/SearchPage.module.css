@@ -1,0 +1,39 @@
+.mainContainer {
+  color: #888;
+}
+
+.containerItem {
+  display: flex;
+  max-width: 150vh;
+  margin: 10px;
+  background-color: #adadad0c;
+  border-radius: 15px;
+  height: 15vh;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.infoText {
+  max-width: 50vh;
+  font-size: 13px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.nameHeader {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.containerItem img {
+  width: 15vh;
+  height: 70px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.priceTag {
+  margin-left: auto;
+  text-align: right;
+  margin-right: 20px;
+}

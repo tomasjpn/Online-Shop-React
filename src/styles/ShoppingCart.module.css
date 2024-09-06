@@ -211,3 +211,7 @@
   overflow-y: auto;
   scrollbar-width: none;
 }
+
+.contianer {
+  background-color: #88888812;
+}
