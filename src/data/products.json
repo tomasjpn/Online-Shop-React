@@ -151,7 +151,7 @@
       },
       {
         "type": "video",
-        "path": "/assets/productImg2/Logo/prod1.m4v"
+        "path": "/assets/productImg2/Logo/prod1.mp4"
       }
     ],
     "options": {
@@ -172,36 +172,7 @@
       }
     }
   },
-  {
-    "id": 6,
-    "name": "Visual Effects Video",
-    "price": "~40-90€",
-    "description": "Erwecken Sie Ihre Videoprojekte mit atemberaubenden visuellen Effekten zum Leben. Ideal für Filme, Musikvideos oder Werbeclips, die beeindrucken sollen.",
-    "typeWork": "dynamic",
-    "media": [
-      {
-        "type": "image",
-        "path": "/assets/productImg/Unbenannt-6.png"
-      }
-    ],
-    "options": {
-      "basic": {
-        "description": "In der Basic Option erstelle ich für Sie ein professionelles Visual Effects Video, individuell nach Ihren Vorgaben gestaltet. Sie bestimmen die Effekte und Inhalte. Nach dem ersten Entwurf biete ich Ihnen eine Korrekturrunde an, um sicherzustellen, dass das Ergebnis Ihren Erwartungen entspricht. Diese Option eignet sich ideal für Projekte mit klaren Anforderungen und begrenztem Budget.",
-        "price": "39.99€",
-        "quantity": 0
-      },
-      "plus": {
-        "description": "Mit der Plus Option erhalten Sie eine erweiterte Gestaltung Ihres Visual Effects Videos, einschließlich zwei Korrekturrunden zur Feinabstimmung. Zusätzlich biete ich Ihnen eine größere Auswahl an visuellen Effekten, wie besondere Übergänge und Animationen, um Ihrem Video eine persönliche Note zu verleihen. Diese Option ist ideal, wenn Sie mehr Anpassungsmöglichkeiten benötigen und ein beeindruckenderes Ergebnis wünschen.",
-        "price": "74.99€",
-        "quantity": 0
-      },
-      "premium": {
-        "description": "In der Premium Option biete ich Ihnen das Maximum an Individualität und Perfektion. Neben drei Korrekturrunden und einer umfassenden Beratung übernehme ich auch die Optimierung Ihrer Inhalte. Auf Wunsch erstelle ich maßgeschneiderte visuelle Effekte und optimiere Ihr Video für verschiedene Plattformen und Formate. Diese Option ist die beste Wahl für anspruchsvolle Projekte, die professionelle Ergebnisse erfordern.",
-        "price": "89.99€",
-        "quantity": 0
-      }
-    }
-  },
+
   {
     "id": 5,
     "name": "Image Editing",
@@ -248,6 +219,44 @@
       "premium": {
         "description": "Die Premium Option bietet eine umfassende und individuelle Bildbearbeitung, einschließlich drei Korrekturrunden und professioneller Retusche. Ideal für Projekte, die höchste Ansprüche an die Bildqualität stellen.",
         "price": "29.99€",
+        "quantity": 0
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Visual Effects Video",
+    "price": "~40-90€",
+    "description": "Erwecken Sie Ihre Videoprojekte mit atemberaubenden visuellen Effekten zum Leben. Ideal für Filme, Musikvideos oder Werbeclips, die beeindrucken sollen.",
+    "typeWork": "dynamic",
+    "media": [
+      {
+        "type": "image",
+        "path": "/assets/productImg/Unbenannt-6.png"
+      },
+      {
+        "type": "video",
+        "path": "https://drive.google.com/file/d/16I_ZeXE9xDPF35fpQ8VIB9rZAQtI0uHv/preview"
+      },
+      {
+        "type": "video",
+        "path": "https://drive.google.com/file/d/15dzjVcIkf2av2V0pH61LVa49DSN6fje4/preview"
+      }
+    ],
+    "options": {
+      "basic": {
+        "description": "In der Basic Option erstelle ich für Sie ein professionelles Visual Effects Video, individuell nach Ihren Vorgaben gestaltet. Sie bestimmen die Effekte und Inhalte. Nach dem ersten Entwurf biete ich Ihnen eine Korrekturrunde an, um sicherzustellen, dass das Ergebnis Ihren Erwartungen entspricht. Diese Option eignet sich ideal für Projekte mit klaren Anforderungen und begrenztem Budget.",
+        "price": "39.99€",
+        "quantity": 0
+      },
+      "plus": {
+        "description": "Mit der Plus Option erhalten Sie eine erweiterte Gestaltung Ihres Visual Effects Videos, einschließlich zwei Korrekturrunden zur Feinabstimmung. Zusätzlich biete ich Ihnen eine größere Auswahl an visuellen Effekten, wie besondere Übergänge und Animationen, um Ihrem Video eine persönliche Note zu verleihen. Diese Option ist ideal, wenn Sie mehr Anpassungsmöglichkeiten benötigen und ein beeindruckenderes Ergebnis wünschen.",
+        "price": "74.99€",
+        "quantity": 0
+      },
+      "premium": {
+        "description": "In der Premium Option biete ich Ihnen das Maximum an Individualität und Perfektion. Neben drei Korrekturrunden und einer umfassenden Beratung übernehme ich auch die Optimierung Ihrer Inhalte. Auf Wunsch erstelle ich maßgeschneiderte visuelle Effekte und optimiere Ihr Video für verschiedene Plattformen und Formate. Diese Option ist die beste Wahl für anspruchsvolle Projekte, die professionelle Ergebnisse erfordern.",
+        "price": "89.99€",
         "quantity": 0
       }
     }

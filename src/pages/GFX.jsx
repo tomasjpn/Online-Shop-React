@@ -13,6 +13,8 @@ import {
 } from "../assets/imageImports.js";
 import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop.jsx";
+import Watermark from "../components/Watermark/Watermark.jsx";
 import styles from "../styles/GFX.module.css";
 
 const GFX = () => {
@@ -135,6 +137,7 @@ const GFX = () => {
       <BackgroundManager />
       <div className={styles.mainContainer}>
         <Navbar fixed={true} />
+        <ScrollToTop />
 
         {/* Section für Politik Bundespräsident Präsentation*/}
         <motion.section
@@ -265,7 +268,7 @@ const GFX = () => {
           </div>
         </motion.section>
         <p></p>
-        <p style={{ color: "#999" }}>Tomas Pham 2024</p>
+        <Watermark />
       </div>
     </>
   );

@@ -1,24 +1,44 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = ({ fixed }) => {
+  const location = useLocation();
+
   return (
     <div className="mainContainerNavbar">
+      {/* Fügt div nur hinzu, wenn fixed true ist */}
       <div className={`navbar ${fixed ? "fixedNavbar" : ""}`}>
-        {/* Fügt div nur hinzu, wenn fixed true ist */}
         {fixed && <div className="background"></div>}
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/store">Store</Link>
-        <br />
-        <Link to="/gallery">Gallery</Link>
-        <br />
-        <Link to="/searchpage" className="search-page">
+        <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+          Home
+        </Link>
+        <Link
+          to="/store"
+          className={location.pathname === "/store" ? "active" : ""}
+        >
+          Store
+        </Link>
+        <Link
+          to="/gallery"
+          className={location.pathname === "/gallery" ? "active" : ""}
+        >
+          Gallery
+        </Link>
+        <Link
+          to="/searchpage"
+          className={`search-page ${
+            location.pathname === "/searchpage" ? "active" : ""
+          }`}
+        >
           <img />
         </Link>
-        <br />
-        <Link to="/shoppingcart" className="shopping-cart">
+        <Link
+          to="/shoppingcart"
+          className={`shopping-cart ${
+            location.pathname === "/shoppingcart" ? "active" : ""
+          }`}
+        >
           <img />
         </Link>
       </div>

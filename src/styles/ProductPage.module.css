@@ -264,3 +264,7 @@
   border: 1px solid rgb(126, 174, 255);
   background-color: #88888810;
 }
+
+.watermark {
+  margin-top: 100px;
+}

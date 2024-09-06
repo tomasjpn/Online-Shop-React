@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { gif1, gif2, gif3 } from "../assets/videoImports.js";
 import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar.jsx";
+import Watermark from "../components/Watermark/Watermark.jsx";
 import "../styles/index.css";
 import styles from "../styles/VFX.module.css";
 
@@ -265,6 +266,7 @@ const VFX = () => {
             Projekts stets aufrecht erhalten bleibt. Daher bleiben alle Elemente
             in Bewegung mit flüssigen Übergangen.
           </p>
+          <Watermark />
         </motion.div>
       </motion.section>
     </div>

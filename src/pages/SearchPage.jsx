@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/searchBar/SearchBar.jsx";
+import Watermark from "../components/Watermark/Watermark.jsx";
 import data from "../data/products.json";
 import styles from "../styles/SearchPage.module.css";
 
@@ -77,8 +78,8 @@ const SearchPage = () => {
   return (
     <div className={styles.mainContainer}>
       <BackgroundManager />
-      <Navbar />
-      <h1>SearchPage</h1>
+      <Navbar fixed={false} />
+      <h1>SEARCH PAGE</h1>
       <div className={styles.searchBarContainer}>
         <SearchBar
           data={data}
@@ -86,31 +87,36 @@ const SearchPage = () => {
           onFilterChange={handleFilterChange}
         />
       </div>
+      <div className={styles.producContainer}>
+        {filteredProducts.map((product, index) => (
+          <Link
+            to={`/product/${product.id}`}
+            key={product.id}
+            className={styles.containerItem}
+            style={{
+              animationDelay: `${index * 0.1}s`, // Jedes Element hat ein um 0.1 Sekunden verzögertes Delay
+            }}
+          >
+            <img
+              src={product.media[0]?.path}
+              alt={product.name}
+              className={styles.productImage}
+            />
+            <div className={styles.nameHeader}>
+              <h3>{product.name}</h3>
+            </div>
 
-      {filteredProducts.map((product) => (
-        <Link
-          to={`/product/${product.id}`}
-          key={product.id}
-          className={styles.containerItem}
-        >
-          <img
-            src={product.media[0]?.path}
-            alt={product.name}
-            className={styles.productImage}
-          />
-          <div className={styles.nameHeader}>
-            <h3>{product.name}</h3>
-          </div>
+            <div className={styles.infoText}>
+              <p>{product.description}</p>
+            </div>
 
-          <div className={styles.infoText}>
-            <p>{product.description}</p>
-          </div>
-
-          <div className={styles.priceTag}>
-            <p>{product.price}</p>
-          </div>
-        </Link>
-      ))}
+            <div className={styles.priceTag}>
+              <p>{product.price}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+      <Watermark />
     </div>
   );
 };

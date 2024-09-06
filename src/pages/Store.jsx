@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import BackgroundManager from "../components/BackgroundManager";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
+import Watermark from "../components/Watermark/Watermark";
 import data from "../data/products.json";
 import styles from "../styles/Store.module.css";
 
@@ -53,7 +54,7 @@ const Store = () => {
   const variant1 = verticalAnim2(300, 0.7);
   const variant2 = verticalAnim2(300, 0.9);
   const variants = [
-    verticalAnim2(300, 0.7),
+    verticalAnim2(300, 1.7),
     verticalAnim2(300, 0.9),
     verticalAnim2(300, 1),
     verticalAnim2(300, 1.2),
@@ -211,6 +212,7 @@ const Store = () => {
             );
           })}
         </div>
+        <Watermark />
       </motion.section>
     </div>
   );

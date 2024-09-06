@@ -5,6 +5,7 @@ import backgroundImage2 from "../assets/VFX.png";
 import BackgroundManager from "../components/BackgroundManager.js";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop.jsx";
+import Watermark from "../components/Watermark/Watermark.jsx";
 import styles from "../styles/Gallery.module.css";
 
 const Gallery = () => {
@@ -111,6 +112,7 @@ const Gallery = () => {
 
         <button onClick={handleStoreOption}>View</button>
       </div>
+      <Watermark />
     </div>
   );
 };

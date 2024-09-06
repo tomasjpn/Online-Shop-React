@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import BackgroundManager from "../components/BackgroundManager.js";
 import { useCart } from "../components/CartContext.jsx";
 import Navbar from "../components/Navbar";
+import Watermark from "../components/Watermark/Watermark.jsx";
 import styles from "../styles/ShoppingCart.module.css";
 
 // Einkaufswagen Page
@@ -141,7 +142,13 @@ const ShoppingCart = () => {
 
         <div className={styles.cartContainer}>
           {cartItems.length === 0 ? (
-            <p>Your cart is empty</p>
+            <motion.div
+              animate={controlShoppingList}
+              initial="hidden"
+              variants={variant1}
+            >
+              <p>Your cart is empty</p>
+            </motion.div>
           ) : (
             <>
               <div className={styles.containerList}>
@@ -227,6 +234,7 @@ const ShoppingCart = () => {
           </motion.div>
         </div>
       </div>
+      <Watermark />
     </div>
   );
 };

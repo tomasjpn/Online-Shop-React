@@ -18,20 +18,37 @@
   width: 150vh;
   background: linear-gradient(
     250deg,
-    rgb(204, 204, 204) 20%,
+    rgb(200, 208, 234) 20%,
     rgb(230, 230, 230) 40%,
-    rgb(104, 103, 103) 60%,
+    rgb(94, 95, 119) 60%,
     rgb(42, 42, 42) 80%
   );
+
   animation: gradientAnimation 15s ease infinite, slideUp 1s ease-out forwards;
   background-size: 400% 400%;
   border-radius: 20px;
   margin-top: 40px;
-  border: 2px solid;
+
   border-color: #dedede;
   margin-bottom: 0px;
   box-sizing: border-box;
   position: relative;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-left: 6vh;
+  animation: slideIn 1.3s ease-out forwards;
+}
+
+.leftSide button {
+  background-color: #535bf2;
+  border: none;
+  border-radius: 20px;
+}
+
+.leftSide button:hover {
+  background-color: #4f61b8;
 }
 
 @keyframes gradientAnimation {
@@ -57,14 +74,49 @@
   }
 }
 
-.mainAreaTitle h1 {
-  text-align: center;
-  margin-bottom: 0;
+@keyframes slideIn {
+  from {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.titleContainer h1 {
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
+
+.titleContainer {
+  animation: slideIn 0.9s ease-out forwards;
 }
 
 .mainAreaTitle p {
-  margin-top: 3px;
-  font-size: 16px;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 0px;
+  font-size: 20px;
+  color: #636aea;
+  font-weight: 650;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.infoText p {
+  text-align: left;
+  margin-top: 25px;
+  max-width: 60vh;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  animation: slideIn 1.2s ease-out forwards;
 }
 
 .mainAreaTitle h1:hover {
@@ -148,4 +200,29 @@
     transform: translateY(-100vh);
     opacity: 0;
   }
+}
+
+.rightSide img {
+  width: 550px;
+  opacity: 70%;
+}
+
+.rightSide {
+  animation: slideUpSec 1s ease-out forwards;
+}
+
+@keyframes slideUpSec {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 80%;
+    transform: translateY(0);
+  }
+}
+
+.markText {
+  font-size: 16px;
+  margin-left: 10px;
 }

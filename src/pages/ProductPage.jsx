@@ -5,6 +5,7 @@ import { useCart } from "../components/CartContext";
 import ImageCarousel from "../components/ImageCarousel/ImageCarousel";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
+import Watermark from "../components/Watermark/Watermark";
 import data from "../data/products.json";
 import styles from "../styles/ProductPage.module.css";
 
@@ -152,6 +153,9 @@ const ProductPage = () => {
             darauf, mit Ihnen zusammenzuarbeiten!
           </p>
         </div>
+      </div>
+      <div className={styles.watermark}>
+        <Watermark />
       </div>
     </div>
   );

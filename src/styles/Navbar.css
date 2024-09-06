@@ -107,9 +107,34 @@
 }
 
 .navbar a {
+  position: relative;
+  margin-right: 30px;
   opacity: 0;
   animation: slideDown 1s ease-out forwards,
     opacityTransition 1s ease-out forwards;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #535bf2;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.navbar a.active::before {
+  width: 100%;
+}
+
+.navbar a.active {
+  color: #535bf2;
 }
 
 @keyframes slideDown {

@@ -156,15 +156,23 @@
   align-items: center;
   height: 50vh;
   width: 150vh;
-  background: rgba(174, 174, 174, 0.194);
+  background: linear-gradient(
+    250deg,
+    rgb(186, 218, 255) 20%,
+    rgb(230, 230, 230) 40%,
+    rgb(104, 116, 151) 60%,
+    rgb(255, 255, 255) 80%
+  );
+  animation: gradientAnimation 15s ease infinite,
+    slide-from-left 1.2s ease-out forwards;
+  background-size: 400% 400%;
   border-radius: 20px;
   margin-top: 50px;
-  animation: slide-from-left 1.2s ease-out forwards;
 }
 
 .storeButton h2 {
   font-weight: 400;
-  color: rgb(174, 174, 174);
+  color: rgb(253, 253, 253);
   margin-bottom: 0px;
 }
 
@@ -177,7 +185,7 @@
 
 .p2 p {
   margin-top: 0px;
-  color: rgba(0, 0, 0, 0.409);
+  color: rgb(255, 255, 255);
   margin-bottom: 15px;
   max-width: 100vh;
 }
